@@ -6,27 +6,28 @@
 
 <title>SUPER EXCEL | Official Detergent Store</title>
 
-<meta name="description" content="SUPER EXCEL Detergent - Powerful Cleaning and Everyday Value.">
+<meta name="description" content="SUPER EXCEL Detergent - Powerful Cleaning, Fresh Laundry and Everyday Value.">
 
 <style>
 :root{
-  --navy:#071d34;
+  --navy:#061a30;
+  --navy2:#0b2d50;
   --blue:#0d6efd;
-  --blue-dark:#0754b8;
+  --blue2:#0757c7;
   --yellow:#ffd21f;
+  --green:#18a957;
   --white:#ffffff;
-  --light:#f5f8fc;
+  --light:#f4f7fb;
   --text:#17202a;
   --muted:#64748b;
-  --border:#e5eaf1;
-  --green:#20b15a;
-  --shadow:0 15px 45px rgba(7,29,52,.12);
+  --border:#e4eaf2;
+  --shadow:0 15px 45px rgba(6,26,48,.12);
 }
 
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
   scroll-behavior:smooth;
 }
 
@@ -43,8 +44,8 @@ a{
 }
 
 img{
-  max-width:100%;
   display:block;
+  max-width:100%;
 }
 
 .container{
@@ -59,13 +60,14 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.98);
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
-  box-shadow:0 3px 15px rgba(0,0,0,.05);
+  box-shadow:0 3px 18px rgba(0,0,0,.05);
 }
 
 .nav{
-  min-height:72px;
+  min-height:74px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -75,7 +77,9 @@ header{
 .logo{
   font-size:25px;
   font-weight:900;
+  letter-spacing:.5px;
   color:var(--navy);
+  white-space:nowrap;
 }
 
 .logo span{
@@ -84,16 +88,21 @@ header{
 
 .navlinks{
   display:flex;
-  gap:23px;
+  gap:25px;
   font-weight:700;
+}
+
+.navlinks a{
+  transition:.2s;
 }
 
 .navlinks a:hover{
   color:var(--blue);
 }
 
-.header-buttons{
+.header-actions{
   display:flex;
+  align-items:center;
   gap:8px;
 }
 
@@ -104,10 +113,10 @@ header{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:7px;
-  border:0;
-  border-radius:12px;
+  gap:8px;
   padding:13px 20px;
+  border:0;
+  border-radius:13px;
   font-weight:800;
   cursor:pointer;
   transition:.25s;
@@ -128,7 +137,7 @@ header{
 }
 
 .btn-blue:hover{
-  background:var(--blue-dark);
+  background:var(--blue2);
 }
 
 .btn-green{
@@ -136,15 +145,50 @@ header{
   color:#fff;
 }
 
+.menu-btn{
+  display:none;
+  width:44px;
+  height:44px;
+  border:0;
+  border-radius:12px;
+  background:var(--navy);
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu{
+  display:none;
+  background:#fff;
+  border-top:1px solid var(--border);
+  padding:10px 4%;
+}
+
+.mobile-menu a{
+  display:block;
+  padding:13px;
+  font-weight:700;
+  border-radius:10px;
+}
+
+.mobile-menu a:hover{
+  background:var(--light);
+  color:var(--blue);
+}
+
 
 /* HERO */
 
 .hero{
-  background:
-  radial-gradient(circle at 85% 20%,rgba(13,110,253,.55),transparent 30%),
-  linear-gradient(135deg,#061a30,#0b3d73);
   color:#fff;
-  padding:75px 0;
+  padding:80px 0;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(13,110,253,.55),transparent 30%),
+    radial-gradient(circle at 10% 90%,rgba(255,210,31,.12),transparent 28%),
+    linear-gradient(135deg,#04182c,#0b3b70);
 }
 
 .hero-grid{
@@ -156,18 +200,19 @@ header{
 
 .badge{
   display:inline-block;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.2);
   padding:8px 15px;
   border-radius:50px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  font-size:13px;
   font-weight:800;
-  font-size:14px;
+  letter-spacing:.5px;
 }
 
 .hero h1{
-  font-size:clamp(45px,7vw,75px);
-  line-height:1;
-  margin:20px 0;
+  font-size:clamp(48px,7vw,78px);
+  line-height:.95;
+  margin:22px 0 18px;
   font-weight:900;
 }
 
@@ -176,9 +221,9 @@ header{
 }
 
 .hero-text{
-  font-size:20px;
-  color:#e8f1fb;
   max-width:620px;
+  color:#e7f0fa;
+  font-size:20px;
   margin-bottom:28px;
 }
 
@@ -188,34 +233,34 @@ header{
   gap:12px;
 }
 
-.hero-card{
+.hero-image-card{
   background:#fff;
+  padding:18px;
   border-radius:30px;
-  padding:20px;
   box-shadow:0 25px 70px rgba(0,0,0,.3);
 }
 
-.hero-card img{
+.hero-image-card img{
   width:100%;
-  height:410px;
+  height:420px;
   object-fit:contain;
   border-radius:20px;
 }
 
 
-/* TRUST */
+/* TRUST BAR */
 
 .trust{
-  margin-top:-25px;
   position:relative;
+  margin-top:-30px;
   z-index:5;
 }
 
 .trust-box{
   background:#fff;
-  border-radius:20px;
+  padding:24px;
+  border-radius:22px;
   box-shadow:var(--shadow);
-  padding:22px;
 }
 
 .trust-grid{
@@ -226,82 +271,89 @@ header{
 }
 
 .trust-item{
-  font-weight:800;
   color:var(--navy);
+  font-weight:800;
 }
 
-.trust-item span{
+.trust-item .emoji{
+  font-size:28px;
+  display:block;
+  margin-bottom:5px;
+}
+
+.trust-item small{
   display:block;
   color:var(--muted);
-  font-size:13px;
   font-weight:500;
 }
 
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 section{
-  padding:75px 0;
+  padding:78px 0;
 }
 
-.heading{
+.section-heading{
+  max-width:720px;
   text-align:center;
-  max-width:700px;
   margin:0 auto 45px;
 }
 
-.heading h2{
-  font-size:38px;
+.section-heading h2{
   color:var(--navy);
-  margin-bottom:10px;
+  font-size:40px;
+  line-height:1.15;
+  margin-bottom:12px;
 }
 
-.heading p{
+.section-heading p{
   color:var(--muted);
 }
 
 
 /* WHY US */
 
-.features{
+.why-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:20px;
 }
 
-.feature{
+.why-card{
+  padding:30px 22px;
+  border-radius:22px;
   background:var(--light);
   border:1px solid var(--border);
-  border-radius:20px;
-  padding:30px 20px;
   text-align:center;
   transition:.3s;
 }
 
-.feature:hover{
-  transform:translateY(-7px);
+.why-card:hover{
+  transform:translateY(-8px);
   box-shadow:var(--shadow);
+  background:#fff;
 }
 
-.icon{
-  width:65px;
-  height:65px;
+.why-icon{
+  width:68px;
+  height:68px;
   margin:auto;
-  border-radius:18px;
-  background:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:30px;
-  box-shadow:0 7px 20px rgba(0,0,0,.08);
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(0,0,0,.07);
+  font-size:31px;
 }
 
-.feature h3{
-  margin:15px 0 8px;
+.why-card h3{
   color:var(--navy);
+  margin:16px 0 8px;
 }
 
-.feature p{
+.why-card p{
   color:var(--muted);
   font-size:14px;
 }
@@ -320,24 +372,26 @@ section{
 }
 
 .product-card{
-  background:#fff;
-  border-radius:24px;
+  position:relative;
   overflow:hidden;
+  background:#fff;
+  border-radius:25px;
+  border:1px solid var(--border);
   box-shadow:var(--shadow);
   transition:.3s;
 }
 
 .product-card:hover{
-  transform:translateY(-7px);
+  transform:translateY(-8px);
 }
 
 .product-image{
-  height:330px;
+  height:350px;
   padding:20px;
-  background:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
+  background:#fff;
 }
 
 .product-image img{
@@ -346,49 +400,45 @@ section{
   object-fit:contain;
 }
 
-.product-content{
+.product-info{
   padding:25px;
 }
 
-.product-content h3{
-  font-size:25px;
+.product-info h3{
   color:var(--navy);
-  margin-bottom:8px;
+  font-size:25px;
+  margin-bottom:6px;
 }
 
 .product-description{
   color:var(--muted);
   font-size:14px;
-  min-height:50px;
+  min-height:45px;
 }
 
-.weight{
+.weight-badge{
   display:inline-block;
   margin-top:15px;
-  background:#eef5ff;
-  color:var(--blue);
-  padding:6px 12px;
+  padding:6px 13px;
   border-radius:50px;
-  font-weight:800;
+  background:#eaf3ff;
+  color:var(--blue);
+  font-weight:900;
 }
 
-.price{
-  font-size:30px;
+.product-price{
+  font-size:31px;
   font-weight:900;
   color:var(--blue);
-  margin:15px 0;
+  margin:14px 0 17px;
 }
 
-.order-product{
+.order-button{
   width:100%;
 }
 
 
 /* ABOUT */
-
-.about{
-  background:#fff;
-}
 
 .about-grid{
   display:grid;
@@ -397,30 +447,37 @@ section{
   align-items:center;
 }
 
-.about-box{
+.about-image{
   background:var(--light);
-  border-radius:25px;
-  padding:35px;
+  border-radius:28px;
+  padding:25px;
 }
 
-.about-box h2{
-  font-size:36px;
+.about-image img{
+  width:100%;
+  height:400px;
+  object-fit:contain;
+}
+
+.about-content h2{
   color:var(--navy);
-  margin-bottom:15px;
+  font-size:40px;
+  line-height:1.15;
+  margin-bottom:18px;
 }
 
-.about-box p{
+.about-content p{
   color:var(--muted);
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .about-list{
   list-style:none;
-  margin-top:20px;
+  margin:22px 0;
 }
 
 .about-list li{
-  margin:12px 0;
+  margin:11px 0;
   font-weight:700;
 }
 
@@ -432,66 +489,74 @@ section{
 }
 
 
-/* ORDER */
+/* CTA */
 
-.order-section{
-  background:linear-gradient(135deg,#061a30,#0d6efd);
+.cta{
   color:#fff;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(255,255,255,.15),transparent 30%),
+    linear-gradient(135deg,#061a30,#0d6efd);
 }
 
-.order-box{
+.cta-box{
   max-width:850px;
   margin:auto;
   text-align:center;
 }
 
-.order-box h2{
-  font-size:42px;
+.cta-box h2{
+  font-size:43px;
+  line-height:1.15;
   margin-bottom:15px;
 }
 
-.order-box p{
-  color:#e4edf8;
-  margin-bottom:25px;
+.cta-box p{
+  color:#e5edf7;
+  margin-bottom:27px;
 }
 
-.order-buttons{
+.cta-buttons{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:12px;
 }
 
-.contact{
-  margin-top:30px;
+.contact-info{
+  margin-top:28px;
   line-height:2;
 }
 
-.contact a{
-  color:#fff;
-  font-weight:700;
+.contact-info a{
+  font-weight:800;
 }
 
 
 /* FOOTER */
 
 footer{
-  background:#041321;
-  color:#d9e5f2;
-  padding:40px 0 25px;
+  background:#031321;
+  color:#cbd8e6;
+  padding:45px 0 25px;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
-  gap:35px;
+  gap:40px;
   margin-bottom:30px;
+}
+
+.footer-brand h3{
+  color:#fff;
+  font-size:25px;
+  margin-bottom:10px;
 }
 
 .footer-title{
   color:#fff;
-  font-weight:800;
-  margin-bottom:10px;
+  font-weight:900;
+  margin-bottom:12px;
 }
 
 .footer-links{
@@ -499,7 +564,7 @@ footer{
 }
 
 .footer-links li{
-  margin:7px 0;
+  margin:8px 0;
 }
 
 .footer-links a:hover{
@@ -511,50 +576,23 @@ footer{
   padding-top:20px;
   text-align:center;
   font-size:13px;
-  color:#9fb0c3;
-}
-
-
-/* MOBILE MENU */
-
-.mobile-menu-btn{
-  display:none;
-  border:0;
-  background:var(--navy);
-  color:#fff;
-  width:42px;
-  height:42px;
-  border-radius:10px;
-  font-size:22px;
-}
-
-.mobile-menu{
-  display:none;
-  background:#fff;
-  border-top:1px solid var(--border);
-  padding:12px;
-}
-
-.mobile-menu a{
-  display:block;
-  padding:12px;
-  font-weight:700;
+  color:#8fa3b8;
 }
 
 
 /* RESPONSIVE */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
   .navlinks{
     display:none;
   }
 
-  .mobile-menu-btn{
+  .menu-btn{
     display:block;
   }
 
-  .header-buttons .btn-yellow{
+  .header-actions .btn-yellow{
     display:none;
   }
 
@@ -563,11 +601,7 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .features{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .product-grid{
+  .why-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
@@ -580,19 +614,14 @@ footer{
   }
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
 
   .logo{
-    font-size:20px;
-  }
-
-  .header-buttons .btn-blue{
-    padding:10px 13px;
-    font-size:13px;
+    font-size:21px;
   }
 
   .hero{
-    padding:50px 0;
+    padding:55px 0;
   }
 
   .hero h1{
@@ -603,11 +632,19 @@ footer{
     font-size:17px;
   }
 
-  .hero-card img{
-    height:290px;
+  .hero-buttons{
+    flex-direction:column;
   }
 
-  .features,
+  .hero-buttons .btn{
+    width:100%;
+  }
+
+  .hero-image-card img{
+    height:300px;
+  }
+
+  .why-grid,
   .product-grid,
   .trust-grid,
   .footer-grid{
@@ -615,32 +652,34 @@ footer{
   }
 
   section{
-    padding:55px 0;
+    padding:58px 0;
   }
 
-  .heading h2{
-    font-size:31px;
-  }
-
-  .product-image{
-    height:300px;
-  }
-
-  .order-box h2{
+  .section-heading h2,
+  .about-content h2{
     font-size:32px;
   }
 
-  .hero-buttons,
-  .order-buttons{
+  .product-image{
+    height:310px;
+  }
+
+  .about-image img{
+    height:310px;
+  }
+
+  .cta-box h2{
+    font-size:32px;
+  }
+
+  .cta-buttons{
     flex-direction:column;
   }
 
-  .hero-buttons .btn,
-  .order-buttons .btn{
+  .cta-buttons .btn{
     width:100%;
   }
 }
-
 </style>
 </head>
 
@@ -659,20 +698,20 @@ SUPER <span>EXCEL</span>
 <a href="#products">Products</a>
 <a href="#why">Why Us</a>
 <a href="#about">About</a>
-<a href="#order">Contact</a>
+<a href="#order">Order</a>
 </nav>
 
-<div class="header-buttons">
+<div class="header-actions">
 
 <a href="#products" class="btn btn-yellow">
-🛒 Products
+🛒 Shop
 </a>
 
 <a href="tel:+923065313098" class="btn btn-blue">
 📞 Call
 </a>
 
-<button class="mobile-menu-btn" onclick="toggleMenu()">
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
 ☰
 </button>
 
@@ -686,7 +725,7 @@ SUPER <span>EXCEL</span>
 <a href="#products" onclick="closeMenu()">Products</a>
 <a href="#why" onclick="closeMenu()">Why Us</a>
 <a href="#about" onclick="closeMenu()">About</a>
-<a href="#order" onclick="closeMenu()">Contact</a>
+<a href="#order" onclick="closeMenu()">Order</a>
 
 </div>
 
@@ -696,6 +735,8 @@ SUPER <span>EXCEL</span>
 <main id="home">
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="container hero-grid">
@@ -703,7 +744,7 @@ SUPER <span>EXCEL</span>
 <div>
 
 <span class="badge">
-OFFICIAL ONLINE STORE
+OFFICIAL SUPER EXCEL STORE
 </span>
 
 <h1>
@@ -711,21 +752,21 @@ SUPER <span>EXCEL</span>
 </h1>
 
 <p class="hero-text">
-Powerful cleaning, fresh laundry and everyday value.
-Choose the right SUPER EXCEL pack for your everyday washing needs.
+Powerful cleaning for everyday laundry.
+Choose the SUPER EXCEL pack that fits your needs and order directly through WhatsApp.
 </p>
 
 <div class="hero-buttons">
 
 <a href="#products" class="btn btn-yellow">
-🛍️ Shop Now
+🛍️ Explore Products
 </a>
 
 <a
 href="https://wa.me/923065313098?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20SUPER%20EXCEL%20Detergent."
-class="btn btn-blue"
-target="_blank">
-💬 WhatsApp
+target="_blank"
+class="btn btn-blue">
+💬 WhatsApp Order
 </a>
 
 </div>
@@ -733,10 +774,10 @@ target="_blank">
 </div>
 
 
-<div class="hero-card">
+<div class="hero-image-card">
 
 <img
-src="assets/1787465884884.jpg"
+src="1787465884884.jpg"
 alt="SUPER EXCEL Detergent"
 >
 
@@ -747,6 +788,8 @@ alt="SUPER EXCEL Detergent"
 </section>
 
 
+<!-- TRUST -->
+
 <div class="container trust">
 
 <div class="trust-box">
@@ -754,27 +797,27 @@ alt="SUPER EXCEL Detergent"
 <div class="trust-grid">
 
 <div class="trust-item">
-🧼
-<strong>Powerful Cleaning</strong>
-<span>Everyday Laundry</span>
+<span class="emoji">🧼</span>
+Powerful Cleaning
+<small>Everyday laundry</small>
 </div>
 
 <div class="trust-item">
-✨
-<strong>Fresh Laundry</strong>
-<span>Clean & Fresh</span>
+<span class="emoji">✨</span>
+Fresh Laundry
+<small>Clean & fresh</small>
 </div>
 
 <div class="trust-item">
-💰
-<strong>Affordable</strong>
-<span>Great Value</span>
+<span class="emoji">💰</span>
+Great Value
+<small>Affordable packs</small>
 </div>
 
 <div class="trust-item">
-📱
-<strong>Easy Ordering</strong>
-<span>WhatsApp Available</span>
+<span class="emoji">📱</span>
+Easy Ordering
+<small>WhatsApp available</small>
 </div>
 
 </div>
@@ -783,71 +826,73 @@ alt="SUPER EXCEL Detergent"
 
 </div>
 
+
+<!-- WHY US -->
 
 <section id="why">
 
 <div class="container">
 
-<div class="heading">
+<div class="section-heading">
 
 <h2>Why Choose SUPER EXCEL?</h2>
 
 <p>
-A practical detergent choice for your everyday laundry.
+A practical detergent choice for everyday household laundry.
 </p>
 
 </div>
 
 
-<div class="features">
+<div class="why-grid">
 
-<div class="feature">
+<div class="why-card">
 
-<div class="icon">✨</div>
+<div class="why-icon">✨</div>
 
 <h3>Powerful Cleaning</h3>
 
 <p>
-Helps clean everyday dirt from your clothes.
+Helps remove everyday dirt and keeps your laundry clean.
 </p>
 
 </div>
 
 
-<div class="feature">
+<div class="why-card">
 
-<div class="icon">👕</div>
+<div class="why-icon">👕</div>
 
 <h3>Fresh Laundry</h3>
 
 <p>
-Keeps your laundry feeling clean and fresh.
+Designed for a clean and fresh everyday washing experience.
 </p>
 
 </div>
 
 
-<div class="feature">
+<div class="why-card">
 
-<div class="icon">💰</div>
+<div class="why-icon">💰</div>
 
-<h3>Great Value</h3>
+<h3>Affordable</h3>
 
 <p>
-Affordable packs for different customer needs.
+Different pack sizes make it easier to choose according to your budget.
 </p>
 
 </div>
 
 
-<div class="feature">
+<div class="why-card">
 
-<div class="icon">🤝</div>
+<div class="why-icon">🤝</div>
 
 <h3>Easy Ordering</h3>
 
 <p>
-Order quickly through WhatsApp or phone.
+Order directly through WhatsApp or contact us by phone.
 </p>
 
 </div>
@@ -859,16 +904,18 @@ Order quickly through WhatsApp or phone.
 </section>
 
 
+<!-- PRODUCTS -->
+
 <section id="products" class="products">
 
 <div class="container">
 
-<div class="heading">
+<div class="section-heading">
 
 <h2>Our Products</h2>
 
 <p>
-Choose your preferred SUPER EXCEL pack.
+Choose your SUPER EXCEL detergent pack.
 </p>
 
 </div>
@@ -877,35 +924,37 @@ Choose your preferred SUPER EXCEL pack.
 <div class="product-grid">
 
 
+<!-- 25 GRAM -->
+
 <div class="product-card">
 
 <div class="product-image">
 
 <img
-src="assets/1787465884884.jpg"
-alt="SUPER EXCEL 25g Detergent"
+src="IMG-20260823-WA0002.jpg"
+alt="SUPER EXCEL 25 Gram Detergent"
 >
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
 <h3>SUPER EXCEL</h3>
 
 <p class="product-description">
-Perfect small pack for everyday laundry needs.
+Convenient small pack for everyday laundry needs.
 </p>
 
-<span class="weight">
+<span class="weight-badge">
 25 GRAMS
 </span>
 
-<div class="price">
+<div class="product-price">
 Rs. 10
 </div>
 
 <button
-class="btn btn-green order-product"
+class="btn btn-green order-button"
 onclick="orderProduct('SUPER EXCEL 25g','Rs. 10')">
 💬 Order Now
 </button>
@@ -915,35 +964,37 @@ onclick="orderProduct('SUPER EXCEL 25g','Rs. 10')">
 </div>
 
 
+<!-- 50 GRAM -->
+
 <div class="product-card">
 
 <div class="product-image">
 
 <img
-src="assets/IMG-20260823-WA0002.jpg"
-alt="SUPER EXCEL 50g Detergent"
+src="IMG-20260823-WA0003.jpg"
+alt="SUPER EXCEL 50 Gram Detergent"
 >
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
 <h3>SUPER EXCEL</h3>
 
 <p class="product-description">
-Convenient pack for regular household washing.
+A convenient pack for regular household washing.
 </p>
 
-<span class="weight">
+<span class="weight-badge">
 50 GRAMS
 </span>
 
-<div class="price">
+<div class="product-price">
 Rs. 20
 </div>
 
 <button
-class="btn btn-green order-product"
+class="btn btn-green order-button"
 onclick="orderProduct('SUPER EXCEL 50g','Rs. 20')">
 💬 Order Now
 </button>
@@ -953,35 +1004,37 @@ onclick="orderProduct('SUPER EXCEL 50g','Rs. 20')">
 </div>
 
 
+<!-- 115 GRAM -->
+
 <div class="product-card">
 
 <div class="product-image">
 
 <img
-src="assets/IMG-20260823-WA0003.jpg"
-alt="SUPER EXCEL 115g Detergent"
+src="IMG-20260823-WA0004.jpg"
+alt="SUPER EXCEL 115 Gram Detergent"
 >
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
 <h3>SUPER EXCEL</h3>
 
 <p class="product-description">
-A bigger pack for your regular laundry requirements.
+A bigger pack for regular laundry requirements.
 </p>
 
-<span class="weight">
+<span class="weight-badge">
 115 GRAMS
 </span>
 
-<div class="price">
+<div class="product-price">
 Rs. 50
 </div>
 
 <button
-class="btn btn-green order-product"
+class="btn btn-green order-button"
 onclick="orderProduct('SUPER EXCEL 115g','Rs. 50')">
 💬 Order Now
 </button>
@@ -998,49 +1051,45 @@ onclick="orderProduct('SUPER EXCEL 115g','Rs. 50')">
 </section>
 
 
-<section id="about" class="about">
+<!-- ABOUT -->
+
+<section id="about">
 
 <div class="container about-grid">
 
-<div class="about-box">
+
+<div class="about-image">
+
+<img
+src="1787465884884.jpg"
+alt="SUPER EXCEL Official Product"
+>
+
+</div>
+
+
+<div class="about-content">
 
 <h2>
-About SUPER EXCEL
+Clean Clothes. Smart Choice. SUPER EXCEL.
 </h2>
 
 <p>
-SUPER EXCEL is an everyday detergent brand focused on providing practical cleaning solutions for households.
+SUPER EXCEL is an everyday detergent brand focused on practical cleaning, fresh laundry and good value for households.
 </p>
 
 <p>
-Our goal is simple: powerful cleaning, good value and easy ordering for our customers.
+Our goal is simple: provide convenient detergent packs that fit different customer needs and budgets.
 </p>
 
 <ul class="about-list">
 
 <li>Powerful everyday cleaning</li>
-<li>Fresh laundry experience</li>
-<li>Affordable household choice</li>
+<li>Multiple affordable pack sizes</li>
 <li>Easy WhatsApp ordering</li>
+<li>Direct customer support</li>
 
 </ul>
-
-</div>
-
-
-<div>
-
-<div class="heading" style="text-align:left;margin:0 0 20px;">
-
-<h2>
-Simple. Clean. SUPER EXCEL.
-</h2>
-
-<p>
-Choose the pack that suits your needs and order directly through WhatsApp.
-</p>
-
-</div>
 
 <a href="#products" class="btn btn-blue">
 🛍️ View Products
@@ -1053,26 +1102,28 @@ Choose the pack that suits your needs and order directly through WhatsApp.
 </section>
 
 
-<section id="order" class="order-section">
+<!-- ORDER -->
+
+<section id="order" class="cta">
 
 <div class="container">
 
-<div class="order-box">
+<div class="cta-box">
 
 <h2>
 Order SUPER EXCEL Today
 </h2>
 
 <p>
-Select your preferred pack and contact us directly through WhatsApp.
+Choose your preferred pack and contact us directly. We are ready to receive your order.
 </p>
 
-<div class="order-buttons">
+<div class="cta-buttons">
 
 <a
-href="https://wa.me/923065313098?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20SUPER%20EXCEL%20Detergent."
-class="btn btn-yellow"
-target="_blank">
+href="https://wa.me/923065313098?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20SUPER%20EXCEL%20Detergent.%0AProduct%3A%0AQuantity%3A%0AName%3A%0AAddress%3A%0APhone%3A"
+target="_blank"
+class="btn btn-yellow">
 💬 Order on WhatsApp
 </a>
 
@@ -1084,7 +1135,7 @@ class="btn btn-blue">
 
 </div>
 
-<div class="contact">
+<div class="contact-info">
 
 <div>
 📱
@@ -1112,17 +1163,17 @@ Wajahatmasood18@gmail.com
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
 <div class="container">
 
 <div class="footer-grid">
 
-<div>
+<div class="footer-brand">
 
-<h3 style="color:#fff;margin-bottom:10px;">
-SUPER EXCEL
-</h3>
+<h3>SUPER EXCEL</h3>
 
 <p>
 Powerful Cleaning • Fresh Laundry • Everyday Value
@@ -1143,6 +1194,7 @@ Quick Links
 <li><a href="#products">Products</a></li>
 <li><a href="#why">Why Us</a></li>
 <li><a href="#about">About</a></li>
+<li><a href="#order">Order</a></li>
 
 </ul>
 
@@ -1152,19 +1204,21 @@ Quick Links
 <div>
 
 <div class="footer-title">
-Contact
+Contact Us
 </div>
 
 <ul class="footer-links">
 
 <li>
 <a href="tel:+923065313098">
-📞 Call
+📞 +92 306 5313098
 </a>
 </li>
 
 <li>
-<a href="https://wa.me/923065313098" target="_blank">
+<a
+href="https://wa.me/923065313098"
+target="_blank">
 💬 WhatsApp
 </a>
 </li>
@@ -1197,6 +1251,7 @@ Contact
 
 const WHATSAPP_NUMBER = "923065313098";
 
+
 function orderProduct(product,price){
 
 const message =
@@ -1212,25 +1267,30 @@ Name:
 Address:
 Phone:`;
 
-const url =
+const whatsappURL =
 "https://wa.me/" +
 WHATSAPP_NUMBER +
 "?text=" +
 encodeURIComponent(message);
 
-window.open(url,"_blank");
+window.open(whatsappURL,"_blank");
 
 }
 
 
 function toggleMenu(){
 
-const menu = document.getElementById("mobileMenu");
+const menu =
+document.getElementById("mobileMenu");
 
 if(menu.style.display === "block"){
+
 menu.style.display = "none";
+
 }else{
+
 menu.style.display = "block";
+
 }
 
 }
@@ -1245,4 +1305,4 @@ document.getElementById("mobileMenu").style.display = "none";
 </script>
 
 </body>
-</html>
+</html>V
