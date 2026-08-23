@@ -9,11 +9,6 @@
 <meta name="description" content="SUPER EXCEL Detergent - Powerful Cleaning and Everyday Value.">
 
 <style>
-
-/* =========================
-   ROOT
-========================= */
-
 :root{
   --navy:#071d34;
   --blue:#0d6efd;
@@ -58,9 +53,7 @@ img{
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
   position:sticky;
@@ -105,9 +98,7 @@ header{
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .btn{
   display:inline-flex;
@@ -146,9 +137,7 @@ header{
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
   background:
@@ -214,9 +203,7 @@ header{
 }
 
 
-/* =========================
-   TRUST
-========================= */
+/* TRUST */
 
 .trust{
   margin-top:-25px;
@@ -251,9 +238,7 @@ header{
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 section{
   padding:75px 0;
@@ -276,9 +261,7 @@ section{
 }
 
 
-/* =========================
-   WHY US
-========================= */
+/* WHY US */
 
 .features{
   display:grid;
@@ -324,9 +307,7 @@ section{
 }
 
 
-/* =========================
-   PRODUCTS
-========================= */
+/* PRODUCTS */
 
 .products{
   background:var(--light);
@@ -371,4 +352,897 @@ section{
 
 .product-content h3{
   font-size:25px;
-  color:var(--nav
+  color:var(--navy);
+  margin-bottom:8px;
+}
+
+.product-description{
+  color:var(--muted);
+  font-size:14px;
+  min-height:50px;
+}
+
+.weight{
+  display:inline-block;
+  margin-top:15px;
+  background:#eef5ff;
+  color:var(--blue);
+  padding:6px 12px;
+  border-radius:50px;
+  font-weight:800;
+}
+
+.price{
+  font-size:30px;
+  font-weight:900;
+  color:var(--blue);
+  margin:15px 0;
+}
+
+.order-product{
+  width:100%;
+}
+
+
+/* ABOUT */
+
+.about{
+  background:#fff;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-box{
+  background:var(--light);
+  border-radius:25px;
+  padding:35px;
+}
+
+.about-box h2{
+  font-size:36px;
+  color:var(--navy);
+  margin-bottom:15px;
+}
+
+.about-box p{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.about-list{
+  list-style:none;
+  margin-top:20px;
+}
+
+.about-list li{
+  margin:12px 0;
+  font-weight:700;
+}
+
+.about-list li::before{
+  content:"✓";
+  color:var(--blue);
+  font-weight:900;
+  margin-right:10px;
+}
+
+
+/* ORDER */
+
+.order-section{
+  background:linear-gradient(135deg,#061a30,#0d6efd);
+  color:#fff;
+}
+
+.order-box{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+.order-box h2{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.order-box p{
+  color:#e4edf8;
+  margin-bottom:25px;
+}
+
+.order-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.contact{
+  margin-top:30px;
+  line-height:2;
+}
+
+.contact a{
+  color:#fff;
+  font-weight:700;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#041321;
+  color:#d9e5f2;
+  padding:40px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:35px;
+  margin-bottom:30px;
+}
+
+.footer-title{
+  color:#fff;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.footer-links{
+  list-style:none;
+}
+
+.footer-links li{
+  margin:7px 0;
+}
+
+.footer-links a:hover{
+  color:var(--yellow);
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:20px;
+  text-align:center;
+  font-size:13px;
+  color:#9fb0c3;
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu-btn{
+  display:none;
+  border:0;
+  background:var(--navy);
+  color:#fff;
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  font-size:22px;
+}
+
+.mobile-menu{
+  display:none;
+  background:#fff;
+  border-top:1px solid var(--border);
+  padding:12px;
+}
+
+.mobile-menu a{
+  display:block;
+  padding:12px;
+  font-weight:700;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .mobile-menu-btn{
+    display:block;
+  }
+
+  .header-buttons .btn-yellow{
+    display:none;
+  }
+
+  .hero-grid,
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .logo{
+    font-size:20px;
+  }
+
+  .header-buttons .btn-blue{
+    padding:10px 13px;
+    font-size:13px;
+  }
+
+  .hero{
+    padding:50px 0;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero-text{
+    font-size:17px;
+  }
+
+  .hero-card img{
+    height:290px;
+  }
+
+  .features,
+  .product-grid,
+  .trust-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:55px 0;
+  }
+
+  .heading h2{
+    font-size:31px;
+  }
+
+  .product-image{
+    height:300px;
+  }
+
+  .order-box h2{
+    font-size:32px;
+  }
+
+  .hero-buttons,
+  .order-buttons{
+    flex-direction:column;
+  }
+
+  .hero-buttons .btn,
+  .order-buttons .btn{
+    width:100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+SUPER <span>EXCEL</span>
+</a>
+
+<nav class="navlinks">
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#why">Why Us</a>
+<a href="#about">About</a>
+<a href="#order">Contact</a>
+</nav>
+
+<div class="header-buttons">
+
+<a href="#products" class="btn btn-yellow">
+🛒 Products
+</a>
+
+<a href="tel:+923065313098" class="btn btn-blue">
+📞 Call
+</a>
+
+<button class="mobile-menu-btn" onclick="toggleMenu()">
+☰
+</button>
+
+</div>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#products" onclick="closeMenu()">Products</a>
+<a href="#why" onclick="closeMenu()">Why Us</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#order" onclick="closeMenu()">Contact</a>
+
+</div>
+
+</header>
+
+
+<main id="home">
+
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="badge">
+OFFICIAL ONLINE STORE
+</span>
+
+<h1>
+SUPER <span>EXCEL</span>
+</h1>
+
+<p class="hero-text">
+Powerful cleaning, fresh laundry and everyday value.
+Choose the right SUPER EXCEL pack for your everyday washing needs.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn btn-yellow">
+🛍️ Shop Now
+</a>
+
+<a
+href="https://wa.me/923065313098?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20SUPER%20EXCEL%20Detergent."
+class="btn btn-blue"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<img
+src="assets/1787465884884.jpg"
+alt="SUPER EXCEL Detergent"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="container trust">
+
+<div class="trust-box">
+
+<div class="trust-grid">
+
+<div class="trust-item">
+🧼
+<strong>Powerful Cleaning</strong>
+<span>Everyday Laundry</span>
+</div>
+
+<div class="trust-item">
+✨
+<strong>Fresh Laundry</strong>
+<span>Clean & Fresh</span>
+</div>
+
+<div class="trust-item">
+💰
+<strong>Affordable</strong>
+<span>Great Value</span>
+</div>
+
+<div class="trust-item">
+📱
+<strong>Easy Ordering</strong>
+<span>WhatsApp Available</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<section id="why">
+
+<div class="container">
+
+<div class="heading">
+
+<h2>Why Choose SUPER EXCEL?</h2>
+
+<p>
+A practical detergent choice for your everyday laundry.
+</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+
+<div class="icon">✨</div>
+
+<h3>Powerful Cleaning</h3>
+
+<p>
+Helps clean everyday dirt from your clothes.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">👕</div>
+
+<h3>Fresh Laundry</h3>
+
+<p>
+Keeps your laundry feeling clean and fresh.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">💰</div>
+
+<h3>Great Value</h3>
+
+<p>
+Affordable packs for different customer needs.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">🤝</div>
+
+<h3>Easy Ordering</h3>
+
+<p>
+Order quickly through WhatsApp or phone.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="products" class="products">
+
+<div class="container">
+
+<div class="heading">
+
+<h2>Our Products</h2>
+
+<p>
+Choose your preferred SUPER EXCEL pack.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/1787465884884.jpg"
+alt="SUPER EXCEL 25g Detergent"
+>
+
+</div>
+
+<div class="product-content">
+
+<h3>SUPER EXCEL</h3>
+
+<p class="product-description">
+Perfect small pack for everyday laundry needs.
+</p>
+
+<span class="weight">
+25 GRAMS
+</span>
+
+<div class="price">
+Rs. 10
+</div>
+
+<button
+class="btn btn-green order-product"
+onclick="orderProduct('SUPER EXCEL 25g','Rs. 10')">
+💬 Order Now
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/IMG-20260823-WA0002.jpg"
+alt="SUPER EXCEL 50g Detergent"
+>
+
+</div>
+
+<div class="product-content">
+
+<h3>SUPER EXCEL</h3>
+
+<p class="product-description">
+Convenient pack for regular household washing.
+</p>
+
+<span class="weight">
+50 GRAMS
+</span>
+
+<div class="price">
+Rs. 20
+</div>
+
+<button
+class="btn btn-green order-product"
+onclick="orderProduct('SUPER EXCEL 50g','Rs. 20')">
+💬 Order Now
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/IMG-20260823-WA0003.jpg"
+alt="SUPER EXCEL 115g Detergent"
+>
+
+</div>
+
+<div class="product-content">
+
+<h3>SUPER EXCEL</h3>
+
+<p class="product-description">
+A bigger pack for your regular laundry requirements.
+</p>
+
+<span class="weight">
+115 GRAMS
+</span>
+
+<div class="price">
+Rs. 50
+</div>
+
+<button
+class="btn btn-green order-product"
+onclick="orderProduct('SUPER EXCEL 115g','Rs. 50')">
+💬 Order Now
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about" class="about">
+
+<div class="container about-grid">
+
+<div class="about-box">
+
+<h2>
+About SUPER EXCEL
+</h2>
+
+<p>
+SUPER EXCEL is an everyday detergent brand focused on providing practical cleaning solutions for households.
+</p>
+
+<p>
+Our goal is simple: powerful cleaning, good value and easy ordering for our customers.
+</p>
+
+<ul class="about-list">
+
+<li>Powerful everyday cleaning</li>
+<li>Fresh laundry experience</li>
+<li>Affordable household choice</li>
+<li>Easy WhatsApp ordering</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="heading" style="text-align:left;margin:0 0 20px;">
+
+<h2>
+Simple. Clean. SUPER EXCEL.
+</h2>
+
+<p>
+Choose the pack that suits your needs and order directly through WhatsApp.
+</p>
+
+</div>
+
+<a href="#products" class="btn btn-blue">
+🛍️ View Products
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="order" class="order-section">
+
+<div class="container">
+
+<div class="order-box">
+
+<h2>
+Order SUPER EXCEL Today
+</h2>
+
+<p>
+Select your preferred pack and contact us directly through WhatsApp.
+</p>
+
+<div class="order-buttons">
+
+<a
+href="https://wa.me/923065313098?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20SUPER%20EXCEL%20Detergent."
+class="btn btn-yellow"
+target="_blank">
+💬 Order on WhatsApp
+</a>
+
+<a
+href="tel:+923065313098"
+class="btn btn-blue">
+📞 Call Now
+</a>
+
+</div>
+
+<div class="contact">
+
+<div>
+📱
+<a href="tel:+923065313098">
++92 306 5313098
+</a>
+</div>
+
+<div>
+📧
+<a href="mailto:Wajahatmasood18@gmail.com">
+Wajahatmasood18@gmail.com
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3 style="color:#fff;margin-bottom:10px;">
+SUPER EXCEL
+</h3>
+
+<p>
+Powerful Cleaning • Fresh Laundry • Everyday Value
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Quick Links
+</div>
+
+<ul class="footer-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#why">Why Us</a></li>
+<li><a href="#about">About</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Contact
+</div>
+
+<ul class="footer-links">
+
+<li>
+<a href="tel:+923065313098">
+📞 Call
+</a>
+</li>
+
+<li>
+<a href="https://wa.me/923065313098" target="_blank">
+💬 WhatsApp
+</a>
+</li>
+
+<li>
+<a href="mailto:Wajahatmasood18@gmail.com">
+📧 Email
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 SUPER EXCEL. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const WHATSAPP_NUMBER = "923065313098";
+
+function orderProduct(product,price){
+
+const message =
+`Assalam-o-Alaikum,
+
+I want to order SUPER EXCEL Detergent.
+
+Product: ${product}
+Price: ${price}
+
+Quantity:
+Name:
+Address:
+Phone:`;
+
+const url =
+"https://wa.me/" +
+WHATSAPP_NUMBER +
+"?text=" +
+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+
+function toggleMenu(){
+
+const menu = document.getElementById("mobileMenu");
+
+if(menu.style.display === "block"){
+menu.style.display = "none";
+}else{
+menu.style.display = "block";
+}
+
+}
+
+
+function closeMenu(){
+
+document.getElementById("mobileMenu").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
