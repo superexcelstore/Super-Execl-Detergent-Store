@@ -9,6 +9,7 @@
 <meta name="description" content="SUPER EXCEL Detergent - Powerful Cleaning, Fresh Laundry and Everyday Value.">
 
 <style>
+
 :root{
   --navy:#061a30;
   --navy2:#0c3158;
@@ -53,7 +54,8 @@ img{
   margin:auto;
 }
 
-/* HEADER */
+
+/* ================= HEADER ================= */
 
 header{
   position:sticky;
@@ -104,7 +106,8 @@ header{
   align-items:center;
 }
 
-/* BUTTONS */
+
+/* ================= BUTTONS ================= */
 
 .btn{
   display:inline-flex;
@@ -154,7 +157,8 @@ header{
   cursor:pointer;
 }
 
-/* MOBILE MENU */
+
+/* ================= MOBILE MENU ================= */
 
 .mobile-menu{
   display:none;
@@ -175,11 +179,12 @@ header{
   color:var(--blue);
 }
 
-/* HERO */
+
+/* ================= HERO ================= */
 
 .hero{
   color:#fff;
-  padding:78px 0;
+  padding:75px 0;
   background:
     radial-gradient(circle at 85% 20%,rgba(13,110,253,.55),transparent 30%),
     linear-gradient(135deg,#04182c,#0b3b70);
@@ -187,7 +192,7 @@ header{
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
+  grid-template-columns:1fr 1fr;
   align-items:center;
   gap:55px;
 }
@@ -226,21 +231,26 @@ header{
   gap:12px;
 }
 
+
+/* MAIN IMAGE */
+
 .hero-image{
   background:#fff;
-  padding:18px;
+  padding:15px;
   border-radius:30px;
-  box-shadow:0 25px 70px rgba(0,0,0,.3);
+  box-shadow:0 25px 70px rgba(0,0,0,.30);
 }
 
 .hero-image img{
   width:100%;
-  height:390px;
+  height:500px;
   object-fit:contain;
-  border-radius:20px;
+  border-radius:22px;
+  background:#fff;
 }
 
-/* TRUST */
+
+/* ================= TRUST ================= */
 
 .trust{
   margin-top:-30px;
@@ -278,7 +288,8 @@ header{
   font-weight:500;
 }
 
-/* SECTIONS */
+
+/* ================= SECTIONS ================= */
 
 section{
   padding:78px 0;
@@ -301,7 +312,8 @@ section{
   color:var(--muted);
 }
 
-/* WHY */
+
+/* ================= WHY US ================= */
 
 .why-grid{
   display:grid;
@@ -347,7 +359,8 @@ section{
   font-size:14px;
 }
 
-/* PRODUCTS */
+
+/* ================= PRODUCTS ================= */
 
 .products{
   background:var(--light);
@@ -373,8 +386,8 @@ section{
 }
 
 .product-image{
-  height:290px;
-  padding:18px;
+  height:320px;
+  padding:20px;
   background:#fff;
   display:flex;
   align-items:center;
@@ -423,7 +436,8 @@ section{
   width:100%;
 }
 
-/* ABOUT */
+
+/* ================= ABOUT ================= */
 
 .about-grid{
   display:grid;
@@ -440,7 +454,7 @@ section{
 
 .about-image img{
   width:100%;
-  height:380px;
+  height:400px;
   object-fit:contain;
 }
 
@@ -473,7 +487,8 @@ section{
   margin-right:10px;
 }
 
-/* CTA */
+
+/* ================= CTA ================= */
 
 .cta{
   color:#fff;
@@ -511,7 +526,8 @@ section{
   line-height:2;
 }
 
-/* FOOTER */
+
+/* ================= FOOTER ================= */
 
 footer{
   background:#031321;
@@ -558,7 +574,8 @@ footer{
   color:#8fa3b8;
 }
 
-/* RESPONSIVE */
+
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:950px){
 
@@ -590,6 +607,7 @@ footer{
   .footer-grid{
     grid-template-columns:1fr 1fr;
   }
+
 }
 
 @media(max-width:650px){
@@ -619,7 +637,7 @@ footer{
   }
 
   .hero-image img{
-    height:300px;
+    height:360px;
   }
 
   .why-grid,
@@ -639,11 +657,11 @@ footer{
   }
 
   .product-image{
-    height:300px;
+    height:330px;
   }
 
   .about-image img{
-    height:300px;
+    height:330px;
   }
 
   .cta-box h2{
@@ -657,11 +675,17 @@ footer{
   .cta-buttons .btn{
     width:100%;
   }
+
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -697,19 +721,25 @@ SUPER <span>EXCEL</span>
 
 </div>
 
+
 <div class="mobile-menu" id="mobileMenu">
+
 <a href="#home" onclick="closeMenu()">Home</a>
 <a href="#products" onclick="closeMenu()">Products</a>
 <a href="#why" onclick="closeMenu()">Why Us</a>
 <a href="#about" onclick="closeMenu()">About</a>
 <a href="#order" onclick="closeMenu()">Order</a>
+
 </div>
 
 </header>
 
+
+
 <main id="home">
 
-<!-- HERO -->
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -747,11 +777,14 @@ class="btn btn-blue">
 
 </div>
 
+
+<!-- MAIN PROFILE IMAGE -->
+
 <div class="hero-image">
 
 <img
-src="IMG-20260823-WA0004.jpg"
-alt="SUPER EXCEL Complete Product Range"
+src="WhatsApp%20Image%202026-07-09%20at%209.50.17%20AM.jpeg"
+alt="SUPER EXCEL Main Product"
 >
 
 </div>
@@ -761,7 +794,8 @@ alt="SUPER EXCEL Complete Product Range"
 </section>
 
 
-<!-- TRUST -->
+
+<!-- ================= TRUST ================= -->
 
 <div class="container trust">
 
@@ -800,7 +834,8 @@ Easy Ordering
 </div>
 
 
-<!-- WHY US -->
+
+<!-- ================= WHY US ================= -->
 
 <section id="why">
 
@@ -816,31 +851,77 @@ A practical detergent choice for everyday household laundry.
 
 </div>
 
+
 <div class="why-grid">
 
-<div class="why-card">
-<div class="why-icon">✨</div>
-<h3>Powerful Cleaning</h3>
-<p>Helps remove everyday dirt and keeps laundry clean.</p>
-</div>
 
 <div class="why-card">
-<div class="why-icon">👕</div>
-<h3>Fresh Laundry</h3>
-<p>Made for a clean and fresh everyday washing experience.</p>
+
+<div class="why-icon">
+✨
 </div>
 
-<div class="why-card">
-<div class="why-icon">💰</div>
-<h3>Great Value</h3>
-<p>Multiple pack sizes make it easy to choose according to your budget.</p>
+<h3>
+Powerful Cleaning
+</h3>
+
+<p>
+Helps remove everyday dirt and keeps laundry clean.
+</p>
+
 </div>
 
+
 <div class="why-card">
-<div class="why-icon">🤝</div>
-<h3>Easy Ordering</h3>
-<p>Order directly through WhatsApp or contact us by phone.</p>
+
+<div class="why-icon">
+👕
 </div>
+
+<h3>
+Fresh Laundry
+</h3>
+
+<p>
+Made for a clean and fresh everyday washing experience.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+💰
+</div>
+
+<h3>
+Great Value
+</h3>
+
+<p>
+Multiple pack sizes make it easy to choose according to your budget.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+🤝
+</div>
+
+<h3>
+Easy Ordering
+</h3>
+
+<p>
+Order directly through WhatsApp or contact us by phone.
+</p>
+
+</div>
+
 
 </div>
 
@@ -849,7 +930,8 @@ A practical detergent choice for everyday household laundry.
 </section>
 
 
-<!-- PRODUCTS -->
+
+<!-- ================= PRODUCTS ================= -->
 
 <section id="products" class="products">
 
@@ -857,13 +939,16 @@ A practical detergent choice for everyday household laundry.
 
 <div class="section-heading">
 
-<h2>SUPER EXCEL Products</h2>
+<h2>
+SUPER EXCEL Products
+</h2>
 
 <p>
 Choose the pack size that fits your needs.
 </p>
 
 </div>
+
 
 <div class="product-grid">
 
@@ -875,15 +960,17 @@ Choose the pack size that fits your needs.
 <div class="product-image">
 
 <img
-src="IMG-20260823-WA0003.jpg"
-alt="SUPER EXCEL 25 Gram Detergent"
+src="WhatsApp%20Image%202026-08-23%20at%201.40.33%20PM%20(1).jpeg"
+alt="SUPER EXCEL 25 Gram"
 >
 
 </div>
 
 <div class="product-info">
 
-<h3>SUPER EXCEL</h3>
+<h3>
+SUPER EXCEL
+</h3>
 
 <p class="product-description">
 Affordable small pack for everyday laundry.
@@ -908,6 +995,7 @@ onclick="orderProduct('SUPER EXCEL 25g','Rs. 10')">
 </div>
 
 
+
 <!-- 50 GRAMS / RS 20 -->
 
 <div class="product-card">
@@ -915,15 +1003,17 @@ onclick="orderProduct('SUPER EXCEL 25g','Rs. 10')">
 <div class="product-image">
 
 <img
-src="IMG-20260823-WA0003.jpg"
-alt="SUPER EXCEL 50 Gram Detergent"
+src="WhatsApp%20Image%202026-08-23%20at%201.41.08%20PM.jpeg"
+alt="SUPER EXCEL 50 Gram"
 >
 
 </div>
 
 <div class="product-info">
 
-<h3>SUPER EXCEL</h3>
+<h3>
+SUPER EXCEL
+</h3>
 
 <p class="product-description">
 Convenient pack for regular household laundry.
@@ -948,6 +1038,7 @@ onclick="orderProduct('SUPER EXCEL 50g','Rs. 20')">
 </div>
 
 
+
 <!-- 115 GRAMS / RS 50 -->
 
 <div class="product-card">
@@ -955,15 +1046,17 @@ onclick="orderProduct('SUPER EXCEL 50g','Rs. 20')">
 <div class="product-image">
 
 <img
-src="IMG-20260823-WA0002.jpg"
-alt="SUPER EXCEL 115 Gram Detergent"
+src="WhatsApp%20Image%202026-08-23%20at%2012.59.04%20PM.jpeg"
+alt="SUPER EXCEL 115 Gram"
 >
 
 </div>
 
 <div class="product-info">
 
-<h3>SUPER EXCEL</h3>
+<h3>
+SUPER EXCEL
+</h3>
 
 <p class="product-description">
 A larger pack for regular household washing.
@@ -988,6 +1081,7 @@ onclick="orderProduct('SUPER EXCEL 115g','Rs. 50')">
 </div>
 
 
+
 <!-- 500 GRAMS / RS 250 -->
 
 <div class="product-card">
@@ -995,15 +1089,17 @@ onclick="orderProduct('SUPER EXCEL 115g','Rs. 50')">
 <div class="product-image">
 
 <img
-src="IMG-20260823-WA0004.jpg"
-alt="SUPER EXCEL 500 Gram Detergent"
+src="WhatsApp%20Image%202026-08-23%20at%201.41.36%20PM.jpeg"
+alt="SUPER EXCEL 500 Gram"
 >
 
 </div>
 
 <div class="product-info">
 
-<h3>SUPER EXCEL</h3>
+<h3>
+SUPER EXCEL
+</h3>
 
 <p class="product-description">
 Family-size pack for regular home laundry.
@@ -1028,6 +1124,7 @@ onclick="orderProduct('SUPER EXCEL 500g','Rs. 250')">
 </div>
 
 
+
 <!-- 1 KG / RS 500 -->
 
 <div class="product-card">
@@ -1035,15 +1132,17 @@ onclick="orderProduct('SUPER EXCEL 500g','Rs. 250')">
 <div class="product-image">
 
 <img
-src="IMG-20260823-WA0004.jpg"
-alt="SUPER EXCEL 1 Kilogram Detergent"
+src="WhatsApp%20Image%202026-08-23%20at%201.41.36%20PM%20(1).jpeg"
+alt="SUPER EXCEL 1 Kilogram"
 >
 
 </div>
 
 <div class="product-info">
 
-<h3>SUPER EXCEL</h3>
+<h3>
+SUPER EXCEL
+</h3>
 
 <p class="product-description">
 Large 1kg pack for customers who need more.
@@ -1067,6 +1166,7 @@ onclick="orderProduct('SUPER EXCEL 1kg','Rs. 500')">
 
 </div>
 
+
 </div>
 
 </div>
@@ -1074,20 +1174,23 @@ onclick="orderProduct('SUPER EXCEL 1kg','Rs. 500')">
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
 <div class="container about-grid">
 
+
 <div class="about-image">
 
 <img
-src="IMG-20260823-WA0004.jpg"
-alt="SUPER EXCEL Product Range"
+src="WhatsApp%20Image%202026-07-09%20at%209.50.17%20AM.jpeg"
+alt="SUPER EXCEL"
 >
 
 </div>
+
 
 <div class="about-content">
 
@@ -1103,13 +1206,31 @@ SUPER EXCEL is an everyday detergent brand focused on practical cleaning, fresh 
 Our range includes different pack sizes so customers can choose according to their needs and budget.
 </p>
 
+
 <ul class="about-list">
-<li>25g pack – Rs. 10</li>
-<li>50g pack – Rs. 20</li>
-<li>115g pack – Rs. 50</li>
-<li>500g pack – Rs. 250</li>
-<li>1kg pack – Rs. 500</li>
+
+<li>
+25g pack – Rs. 10
+</li>
+
+<li>
+50g pack – Rs. 20
+</li>
+
+<li>
+115g pack – Rs. 50
+</li>
+
+<li>
+500g pack – Rs. 250
+</li>
+
+<li>
+1kg pack – Rs. 500
+</li>
+
 </ul>
+
 
 <a href="#products" class="btn btn-blue">
 🛍️ View Products
@@ -1122,7 +1243,8 @@ Our range includes different pack sizes so customers can choose according to the
 </section>
 
 
-<!-- ORDER -->
+
+<!-- ================= ORDER ================= -->
 
 <section id="order" class="cta">
 
@@ -1138,22 +1260,31 @@ Order SUPER EXCEL Today
 Choose your preferred pack and contact us directly through WhatsApp.
 </p>
 
+
 <div class="cta-buttons">
+
 
 <a
 href="https://wa.me/923065313098?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20SUPER%20EXCEL%20Detergent.%0AProduct%3A%0AQuantity%3A%0AName%3A%0AAddress%3A%0APhone%3A"
 target="_blank"
 class="btn btn-yellow">
+
 💬 Order on WhatsApp
+
 </a>
+
 
 <a
 href="tel:+923065313098"
 class="btn btn-blue">
+
 📞 Call Now
+
 </a>
 
+
 </div>
+
 
 <div class="contact-info">
 
@@ -1179,10 +1310,12 @@ Wajahatmasood18@gmail.com
 
 </section>
 
+
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1190,15 +1323,19 @@ Wajahatmasood18@gmail.com
 
 <div class="footer-grid">
 
+
 <div class="footer-brand">
 
-<h3>SUPER EXCEL</h3>
+<h3>
+SUPER EXCEL
+</h3>
 
 <p>
 Powerful Cleaning • Fresh Laundry • Everyday Value
 </p>
 
 </div>
+
 
 <div>
 
@@ -1207,14 +1344,31 @@ Quick Links
 </div>
 
 <ul class="footer-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#why">Why Us</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#order">Order</a></li>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#products">Products</a>
+</li>
+
+<li>
+<a href="#why">Why Us</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#order">Order</a>
+</li>
+
 </ul>
 
 </div>
+
 
 <div>
 
@@ -1246,10 +1400,14 @@ Contact Us
 
 </div>
 
+
 </div>
 
+
 <div class="copyright">
+
 © 2026 SUPER EXCEL. All Rights Reserved.
+
 </div>
 
 </div>
@@ -1257,9 +1415,13 @@ Contact Us
 </footer>
 
 
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
 
 const WHATSAPP_NUMBER = "923065313098";
+
 
 function orderProduct(product,price){
 
@@ -1286,6 +1448,7 @@ window.open(url,"_blank");
 
 }
 
+
 function toggleMenu(){
 
 const menu=document.getElementById("mobileMenu");
@@ -1297,6 +1460,7 @@ menu.style.display === "block"
 
 }
 
+
 function closeMenu(){
 
 document.getElementById("mobileMenu").style.display="none";
@@ -1304,6 +1468,7 @@ document.getElementById("mobileMenu").style.display="none";
 }
 
 </script>
+
 
 </body>
 </html>
